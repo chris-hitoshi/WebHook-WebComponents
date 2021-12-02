@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NewsComponent } from './news.component';
+import { DeleteWebhookComponent } from './delete-webhook.component';
 
-describe('NewsComponent', () => {
-  let component: NewsComponent;
-  let fixture: ComponentFixture<NewsComponent>;
+describe('DeleteWebhookComponent', () => {
+  let component: DeleteWebhookComponent;
+  let fixture: ComponentFixture<DeleteWebhookComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NewsComponent ]
+      declarations: [ DeleteWebhookComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NewsComponent);
+    fixture = TestBed.createComponent(DeleteWebhookComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

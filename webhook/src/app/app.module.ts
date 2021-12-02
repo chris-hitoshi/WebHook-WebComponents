@@ -1,32 +1,76 @@
-import { NgModule } from '@angular/core';
+import { FilterComponent } from './webhook/filter-webhook/filter.component';
+import { CreateWebhookComponent } from './webhook/create-webhook/create-webhook.component';
+import { UpdateWebhookComponent } from './webhook/update-webhook/update-webhook.component';
+import { DeleteWebhookComponent } from './webhook/delete-webhook/delete-webhook.component';
+//Imports Module
+import { Injector, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'; 
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { createCustomElement } from '@angular/elements';
 
+//Imports Components
 import { AppComponent } from './app.component';
-import { NewsComponent } from './news/news.component';
+import { TableViewComponent } from './webhook/table-webhook/table-view.component';
 
-import { Injector } from '@angular/core';
-import { createCustomElement } from '@angular/elements'
+//Imports Material
+import { MatToolbarModule } from '@angular/material/toolbar'
+import { MatSliderModule } from '@angular/material/slider';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NewsComponent
+    TableViewComponent,
+    FilterComponent,
+    CreateWebhookComponent,
+    UpdateWebhookComponent,
+    DeleteWebhookComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatSliderModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDividerModule,
+    MatCardModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatListModule,
+    MatSnackBarModule,
+    HttpClientModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule
   ],
   providers: [],
-  bootstrap: [AppComponent, NewsComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule {
-
-  constructor(private injector: Injector){
-    const el = createCustomElement(NewsComponent, { injector });
-    customElements.define('news-widget', el);
-  }
-  
-  ngDoBootstrap() {}
-
+  // constructor(private injector: Injector) {
+  //   const el = createCustomElement(TableViewComponent, { injector });
+  //   customElements.define('webhook-widget', el);
+  // }
+  // ngDoBootstrap() {}
 }

@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { DataService } from './data.service';
+import { WebhookService } from './webhook.service';
 
-describe('DataService', () => {
-  let service: DataService;
+describe('WebhookService', () => {
+  let service: WebhookService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(DataService);
+    service = TestBed.inject(WebhookService);
   });
 
   it('should be created', () => {

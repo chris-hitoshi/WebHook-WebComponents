@@ -5,7 +5,7 @@ import { DeleteWebhookComponent } from './webhook/delete-webhook/delete-webhook.
 //Imports Module
 import { Injector, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
+import { WebhookRoutingModule } from './webhook/webhook-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -44,7 +44,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    WebhookRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSliderModule,
@@ -65,12 +65,12 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatPaginatorModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, TableViewComponent]
 })
 export class AppModule {
-  // constructor(private injector: Injector) {
-  //   const el = createCustomElement(TableViewComponent, { injector });
-  //   customElements.define('webhook-widget', el);
-  // }
-  // ngDoBootstrap() {}
+  constructor(private injector: Injector) {
+    const el = createCustomElement(TableViewComponent, { injector });
+    customElements.define('webhook-widget', el);
+  }
+  ngDoBootstrap() {}
 }

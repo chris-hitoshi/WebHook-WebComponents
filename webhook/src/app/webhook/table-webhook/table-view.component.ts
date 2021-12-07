@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { MatPaginator } from '@angular/material/paginator';
 import { WebhookService } from '../webhook.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
@@ -21,7 +22,10 @@ export class TableViewComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }
 
-  constructor(private webhookService: WebhookService) { }
+  constructor(
+    private webhookService: WebhookService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.webhookService.listWebhook().subscribe(webhook => {
@@ -39,6 +43,14 @@ export class TableViewComponent implements OnInit {
         console.log(foundWebhook)
       }
     })
+  }
+
+  navigateToEdit(id: Number): void {
+    this.router.navigate([{outlets: {updateWebhook: 'webhook/update/' + id}}]);
+  }
+
+  navigateToDelete(id: Number): void {
+    this.router.navigate([{outlets: {updateWebhook: 'webhook/update/' + id}}]);
   }
 
 

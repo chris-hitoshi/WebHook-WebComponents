@@ -34,12 +34,12 @@
         <ng-container matColumnDef="action">
           <th mat-header-cell *matHeaderCellDef>Ações</th>
           <td mat-cell *matCellDef="let row">
-              <a routerLink="/webhook/update/{{ row.id }}">
+              <a (click)="navigateToEdit(row.id)">
                   <i class="material-icons edit">
                       edit    
                   </i>
               </a>
-              <a routerLink="/webhook/delete/{{ row.id }}">
+              <a (click)="navigateToDelete(row.id)">
                   <i class="material-icons delete">
                       delete
                   </i>

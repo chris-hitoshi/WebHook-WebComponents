@@ -31,14 +31,14 @@ export class CreateWebhookComponent implements OnInit {
     // } else {
       this.webhookService.createWebhook(this.webhook).subscribe(() =>{
         this.webhookService.showMessage('Webhook criado!', false);
-        this.router.navigate(['/table']);
+        this.router.navigate([{outlets: {webhook: null} }]);
         });
       // }
   }
 
 
   cancel():void {
-    this.router.navigate(['/table'])
+    this.router.navigate([{outlets: {webhook: null} }])
   }
 
 

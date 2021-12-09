@@ -32,13 +32,13 @@ export class UpdateWebhookComponent implements OnInit {
   updateWebhookById(): void {
     this.WebhookService.updateWebhook(this.webhook).subscribe(() => {
       this.WebhookService.showMessage('Webhook editado com sucesso!');
-      this.router.navigate(['/table'])
+      this.router.navigate([{outlets: {webhook: null} }])
     })
   }
 
 
   cancel(): void {
-    this.router.navigate(['/table']);
+    this.router.navigate([{outlets: {webhook: null} }]);
   }
 
 

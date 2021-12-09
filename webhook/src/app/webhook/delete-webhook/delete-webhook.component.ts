@@ -28,12 +28,12 @@ export class DeleteWebhookComponent implements OnInit {
   deleteWebhook(): void {
     this.WebhookService.deleteWebhook(this.webhook.id).subscribe(() => {
     this.WebhookService.showMessage('Webhook deletado com sucesso!');
-    this.router.navigate(['/table'])
+    this.router.navigate([{outlets: {webhook: null} }])
     })
   }
   
   cancel(): void {
-    this.router.navigate(['/table']);
+    this.router.navigate([{outlets: {webhook: null} }]);
   }
 
 }

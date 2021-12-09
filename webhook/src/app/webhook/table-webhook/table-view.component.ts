@@ -45,13 +45,4 @@ export class TableViewComponent implements OnInit {
     })
   }
 
-  navigateToEdit(id: Number): void {
-    this.router.navigate([{outlets: {updateWebhook: 'webhook/update/' + id}}]);
-  }
-
-  navigateToDelete(id: Number): void {
-    this.router.navigate([{outlets: {updateWebhook: 'webhook/update/' + id}}]);
-  }
-
-
 }

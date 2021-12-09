@@ -4,30 +4,29 @@ import { DeleteWebhookComponent } from './delete-webhook/delete-webhook.componen
 import { UpdateWebhookComponent } from './update-webhook/update-webhook.component';
 import { CreateWebhookComponent } from './create-webhook/create-webhook.component';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 
-const routes: Routes = [
+const routes = [
   {
-    path: "table",
+    path: "",
     component: TableViewComponent,
-    outlet: 'tableWebhook'
+    outlet: 'webhook'
   },
   {
     path: "webhook/create",
     component: CreateWebhookComponent,
-    outlet: 'createWebhook'
+    outlet: 'webhook'
   },
   {
     path: "webhook/update/:id",
     component: UpdateWebhookComponent,
-    outlet: 'updateWebhook',
+    outlet: 'webhook',
     resolve: {webhook: WebhookResolver}
   },
   {
     path: "webhook/delete/:id",
     component: DeleteWebhookComponent,
-    outlet: 'deleteWebhook'
+    outlet: 'webhook'
   },
   { 
     path: '**',

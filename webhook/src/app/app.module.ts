@@ -65,11 +65,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatPaginatorModule
   ],
   providers: [],
-  bootstrap: [AppComponent, TableViewComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule {
   constructor(private injector: Injector) {
-    const el = createCustomElement(TableViewComponent, { injector });
+    const el = createCustomElement(AppComponent, { injector });
     customElements.define('webhook-widget', el);
   }
   ngDoBootstrap() {}

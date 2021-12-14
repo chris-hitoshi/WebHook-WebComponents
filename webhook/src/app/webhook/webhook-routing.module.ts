@@ -18,13 +18,13 @@ const routes = [
     outlet: 'webhook'
   },
   {
-    path: "webhook/update/:id",
+    path: "update/:id",
     component: UpdateWebhookComponent,
     outlet: 'webhook',
     resolve: {webhook: WebhookResolver}
   },
   {
-    path: "webhook/delete/:id",
+    path: "delete/:id",
     component: DeleteWebhookComponent,
     outlet: 'webhook'
   },

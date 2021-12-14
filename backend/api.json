@@ -56,17 +56,6 @@
       "id": 114
     },
     {
-      "userId": "1212313231",
-      "userName": "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
-      "webhookUrl": "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
-      "jwtUrl": "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
-      "clientId": "0000922121",
-      "clientSecret": "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
-      "clientAudience": "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
-      "authenticationType": "basic",
-      "id": 114
-    },
-    {
       "userName": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
       "userId": "999999999999999999999999999999999999999",
       "webhookUrl": "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
@@ -76,6 +65,17 @@
       "clientId": "gggggggggggggggggggggggggggggggggggggggggg",
       "authenticationType": "OAuth",
       "id": 115
+    },
+    {
+      "userName": "aaaaaaaaaaa",
+      "userId": "aaaaaaaaaaaaa",
+      "webhookUrl": "aaaaaaaaaaaaaaaaaaaaaaaa",
+      "jwtUrl": "xxxxxxxxxxx",
+      "clientSecret": "aaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "clientAudience": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "clientId": "aaaaaaaaaaaaaaaaaaaaaaaaa",
+      "authenticationType": "OAuth",
+      "id": 116
     }
   ]
 }
